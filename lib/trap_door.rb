@@ -6,22 +6,16 @@ module TrapDoor
   mattr_accessor :honeypot_field_name
   self.honeypot_field_name = :affiliate_id
 
-  included do
+  
+  def trap_door(options = {})
+    before_filter :check_params, :only => options[:only], :except => options[:except]
   end
 
-  module ClassMethods
-    def trap_door(options = {})
-      before_filter :check_params, :only => options[:only], :except => options[:except]
-      include TrapDoor::InstanceMethods
-    end
-  end
 
-  module InstanceMethods
-    private
+  private
 
-    def check_params
-      redirect_to 'http://en.wikipedia.org/wiki/User:Mike_Rosoft/Spambot' unless params[TrapDoor.honeypot_field_name.to_sym].blank?
-    end
+  def check_params
+    redirect_to 'http://en.wikipedia.org/wiki/User:Mike_Rosoft/Spambot' unless params[TrapDoor.honeypot_field_name.to_sym].blank?
   end
 
   module TrapDoorHelper
