@@ -6,11 +6,14 @@ module TrapDoor
   mattr_accessor :honeypot_field_name
   self.honeypot_field_name = :affiliate_id
 
-  
-  def trap_door(options = {})
-    before_filter :check_params, :only => options[:only], :except => options[:except]
+  included do
   end
 
+  module ClassMethods
+    def trap_door(options = {})
+      before_filter :check_params, :only => options[:only], :except => options[:except]
+    end
+  end
 
   private
 
