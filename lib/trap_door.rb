@@ -11,7 +11,7 @@ module TrapDoor
 
   module ClassMethods
     def trap_door(options = {})
-      before_filter :check_params, :only => options[:only], :except => options[:except]
+      before_action :check_params, :only => options[:only], :except => options[:except]
       include TrapDoor::InstanceMethods
     end
   end
