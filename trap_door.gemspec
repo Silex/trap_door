@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = TrapDoor::VERSION
   s.authors     = ["Mike Breen", "Philippe Vaucher"]
   s.email       = [""]
-  s.homepage    = "https://github.com/hardbap/trap_door"
+  s.homepage    = "https://github.com/Silex/trap_door"
   s.summary     = "Reverse Captcha for Rails."
   s.description = "Unobtrusive Captcha for your Rails forms. Trap Door works by adding a hidden honeypot field to your forms that only a spam bot will fill out. A before filter checks for the presence of this field and banishes bots to a spam trap."
 

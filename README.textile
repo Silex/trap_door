@@ -4,7 +4,7 @@ Unobtrusive Captcha for your Rails forms. Trap Door works by adding a hidden "ho
 
 h2. Installation
 
-@gem 'trap_door', :git => 'git://github.com/hardbap/trap_door.git'@
+@gem 'trap_door', github: 'Silex/trap_door'@
 
 h2. Using Trap Door
 
