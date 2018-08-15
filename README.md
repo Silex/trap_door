@@ -1,3 +1,7 @@
+# This repository is no longer actively maintained. Please use https://github.com/markets/invisible_captcha instead
+
+-----------
+
 # Trap Door - Reverse Captcha for Rails 4 & 5
 
 Unobtrusive Captcha for your Rails forms. Trap Door works by adding a
